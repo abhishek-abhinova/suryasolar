@@ -1,0 +1,54 @@
+import React, { useState, useEffect } from 'react';
+import { ArrowUp } from 'lucide-react';
+
+// Sirf WhatsApp icon ka pixel-perfect aur properly aligned SVG code
+const WhatsAppIcon = () => (
+  <svg 
+    viewBox="0 0 24 24" 
+    className="w-8 h-8" 
+    fill="white" 
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M12.004 2c-5.51 0-9.993 4.483-9.993 9.993a9.93 9.93 0 0 0 1.357 5.028l-1.348 4.925 5.044-1.323a9.92 9.92 0 0 0 4.933 1.303c5.51 0 9.993-4.483 9.993-9.993C21.997 6.483 17.514 2 12.004 2zm4.72 13.918c-.208.586-1.21 1.11-1.666 1.157-.442.047-.866.23-2.834-.548-2.515-.992-4.124-3.557-4.25-3.725-.125-.167-.939-1.25-.939-2.385 0-1.134.586-1.693.815-1.928.23-.234.5-.294.667-.294.167 0 .334.004.48.012.152.008.355-.058.555.426.204.496.7.1.7.41 1.706.14.34.1.602.062.264-.04.526-.17.728-.475.204-.303.426-.39.73-.217.303.172 1.917.946 2.72 1.662.693.616 1.082.843 1.238.995.156.153.246.257.063.468-.184.21-.785.914-.996 1.226-.207.312-.416.34-.72.18-.303-.16-1.282-.473-2.44-1.508-.9-.803-1.507-1.795-1.684-2.1-.176-.303-.02-.468.133-.62.137-.136.304-.355.457-.53.152-.177.203-.302.304-.505.1-.203.05-.383-.025-.535-.075-.152-.668-1.608-.915-2.204-.24-.582-.487-.5-.67-.51-.173-.008-.37-.01-.568-.01-.2 0-.523.075-.796.375C7.42 6.574 6 7.994 6 9.79c0 1.797 1.305 3.535 1.487 3.78.182.246 2.567 3.92 6.22 5.503 3.1 1.343 3.743 1.076 4.417 1.013.675-.063 2.176-.89 2.48-1.748.303-.858.303-1.595.212-1.748-.09-.152-.33-.243-.692-.424z"/>
+  </svg>
+);
+
+const FloatingButtons = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const toggleVisibility = () => setIsVisible(window.scrollY > 300);
+    window.addEventListener('scroll', toggleVisibility);
+    return () => window.removeEventListener('scroll', toggleVisibility);
+  }, []);
+
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  return (
+    <div className="fixed bottom-6 right-6 z-40 flex flex-col gap-3 items-end">
+      {/* WhatsApp Button */}
+      <a
+        href="https://wa.me/917400204544?text=Hi%20Surya%20Solar,%20I'm%20interested%20in%20solar%20rooftop%20installation."
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 hover:shadow-[#25D366]/40 border border-white/20"
+        title="Chat on WhatsApp"
+      >
+        <WhatsAppIcon />
+      </a>
+
+      {/* Scroll to Top Button */}
+      {isVisible && (
+        <button
+          onClick={scrollToTop}
+          className="flex items-center justify-center w-12 h-12 bg-white text-dark rounded-full shadow-xl hover:scale-110 active:scale-95 transition-all duration-300 border border-slate-200 backdrop-blur-md"
+          title="Back to Top"
+        >
+          <ArrowUp className="w-5 h-5 text-primary" />
+        </button>
+      )}
+    </div>
+  );
+};
+
+export default FloatingButtons;
