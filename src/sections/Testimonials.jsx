@@ -18,24 +18,24 @@ const Testimonials = () => {
       rating: 5,
     },
     {
-      name: 'Saikiran Beverages',
-      role: 'Commercial Partner',
-      location: 'Jeedimetla IDA, Hyderabad',
-      text: "Working with Surya Solar was a pleasure. Their team's expertise and attention to detail are remarkable. The industrial solar solutions they provided for our beverages facility were exactly what we needed. We look forward to collaborating again.",
-      rating: 5,
-    },
-    {
-      name: 'Charoen Pokphand Seeds (India) Pvt Ltd',
-      role: 'Industrial Partner',
-      location: 'Medchal, Telangana',
-      text: 'Surya Solar has been our reliable energy supplier for many years. Their panels and installations are of exceptional quality, and their customer service is unparalleled. They have always exceeded our expectations and delivered projects on time.',
-      rating: 5,
-    },
-    {
       name: 'Narendar Reddy',
       role: 'Director, Commercial Complex',
       location: 'Medchal, Hyderabad',
       text: 'We installed a 25kW rooftop solar system for our commercial complex. The ROI is outstanding, saving us over ₹22,000 every single month. The team is professional, and the mounting structure design is extremely solid.',
+      rating: 5,
+    },
+    {
+      name: 'S. Agarwal',
+      role: '180kW Industrial Project',
+      location: 'Kompally, Secunderabad',
+      text: 'Highly satisfied with our 180kW industrial rooftop setup. The project execution was swift, and the engineering layout is top-tier. Great liaison and support services.',
+      rating: 5,
+    },
+    {
+      name: 'B. Kishore',
+      role: '5kW Residential Project',
+      location: 'Suchitra, Hyderabad',
+      text: 'Superb experience with Surya Solar for my 5kW residential system. Seamless net-metering setup with TSSPDCL, and the panel output has been excellent ever since.',
       rating: 5,
     },
   ];
