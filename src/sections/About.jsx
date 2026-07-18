@@ -45,6 +45,12 @@ const About = () => {
       avatarUrl: '/Founder -Avdhesh Dubey.jpeg',
       objectPos: 'object-top'
     },
+    {name: 'Abhishek Shukla',
+      role: 'AI and Digital Marketing Manager',
+      avatarUrl: '/aabb.png',
+      objectPos: 'object-center'
+      
+    },
     {
       name: 'B. Kishore',
       role: 'General Manager',
