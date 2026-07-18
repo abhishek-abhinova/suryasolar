@@ -50,14 +50,20 @@ const About = () => {
       role: 'General Manager',
       avatarUrl: '/B.Kishore General manager.jpeg',
       objectPos: 'object-center'
-    },
-    {
-      name: 'Abhishek Shukla',
-      role: 'AI & Digital Marketing Manager',
-      avatarUrl: '/aabb.png',
-      objectPos: 'object-top'
     }
   ];
+
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.muted = true;
+      videoRef.current.playsInline = true;
+      videoRef.current.play().catch((err) => {
+        console.warn("Autoplay was prevented on About page video:", err);
+      });
+    }
+  }, []);
 
   const [visibleCards, setVisibleCards] = useState(2);
 
@@ -182,8 +188,9 @@ const About = () => {
             <div className="lg:col-span-5 relative">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/60">
                 <video
+                  ref={videoRef}
                   src="/solar.mp4"
-                  preload="metadata"
+                  preload="auto"
                   autoPlay
                   loop
                   muted
