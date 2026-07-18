@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Button from '../components/Button';
 
 const ConceptToCreation = () => {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.muted = true;
+      videoRef.current.playsInline = true;
+      videoRef.current.play().catch((err) => {
+        console.warn("Autoplay was prevented on ConceptToCreation video:", err);
+      });
+    }
+  }, []);
   return (
     <section className="py-24 bg-gradient-to-b from-white to-slate-50 relative overflow-hidden">
 
@@ -76,8 +87,9 @@ const ConceptToCreation = () => {
               className="relative w-full aspect-video shadow-2xl overflow-hidden border border-slate-100 bg-slate-900 group rounded-3xl"
             >
               <video
+                ref={videoRef}
                 src="/Solar work.mp4"
-                preload="metadata"
+                preload="auto"
                 autoPlay
                 loop
                 muted
