@@ -22,7 +22,7 @@ const FloatingButtons = () => {
     <div className="fixed bottom-6 right-6 z-40 flex flex-col gap-3 items-end">
       {/* WhatsApp Button */}
       <a
-        href="https://wa.me/917400204544?text=Hi%20Surya%20Solar,%20I'm%20interested%20in%20solar%20rooftop%20installation."
+        href="https://wa.me/919000187192?text=Hi%20Surya%20Solar,%20I'm%20interested%20in%20solar%20rooftop%20installation."
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 hover:shadow-[#25D366]/40 border border-white/20"
