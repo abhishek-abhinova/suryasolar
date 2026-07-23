@@ -74,11 +74,11 @@ const Navbar = () => {
               Suchitra, Hyderabad, Telangana
             </span>
             <a 
-              href="tel:+917400204544" 
+              href="tel:+919000187192" 
               className="flex items-center gap-1.5 hover:text-secondary transition-colors"
             >
               <Phone className="h-3.5 w-3.5 text-secondary" />
-              +91 74002 04544
+              +91 9000187192
             </a>
           </div>
 
@@ -157,7 +157,7 @@ const Navbar = () => {
             {/* Mobile Actions and Hamburger (Visible on mobile/tablet) */}
             <div className="flex lg:hidden items-center gap-4">
               <a
-                href="tel:+917400204544"
+                href="tel:+919000187192"
                 className="p-2 rounded-full text-primary hover:bg-primary/10 transition-colors"
                 aria-label="Call Now"
               >
@@ -209,7 +209,7 @@ const Navbar = () => {
             <div className="flex flex-col gap-3 mt-6 pt-5 border-t border-slate-100">
               <Button
                 variant="outline"
-                href="tel:+917400204544"
+                href="tel:+919000187192"
                 className="w-full py-3.5 border-slate-200 text-dark hover:bg-slate-50 font-bold"
               >
                 <Phone className="h-4 w-4" />
@@ -218,7 +218,7 @@ const Navbar = () => {
 
               <Button
                 variant="primary"
-                href="https://wa.me/917400204544?text=Hi%20Surya%20Solar,%20I'm%20interested%20in%20solar%20rooftop%20installation."
+                href="https://wa.me/919000187192?text=Hi%20Surya%20Solar,%20I'm%20interested%20in%20solar%20rooftop%20installation."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-3.5 font-bold"
